@@ -1,5 +1,5 @@
 #Dataset from Google open stocks
-Google_stock <- read.csv("GOOG2.csv");
+Google_stock <- read.csv("./data/GOOG2.csv");
 Google_stock = data.frame(Google_stock);
 head(Google_stock);
 
@@ -88,7 +88,6 @@ test_data = data.frame(test_data)
 target_var = test_data["Adj.Close"]
 Adj.Close = data.frame(target_var)
 test_features = within(test_data, rm(Adj.Close))
-test_features = test_features
 test_features
 
 #Fitting the Random Forest Regressor
